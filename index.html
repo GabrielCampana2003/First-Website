@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaxinhok - Movies</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    
+    <style>
+         
+         *{
+             padding: 0;
+             margin: 0;
+         }
+
+         html{
+            background: #53BDEB;
+         }
+
+         nav{
+             display: flex;
+             justify-content: space-between;
+             position: absolute;
+             width: 100%;
+             height: 51px;
+             background: linear-gradient(180deg, rgba(0, 0, 0, 0.504) 0%, rgba(0, 0, 0, 0.72) 65.62%);
+         }
+         .nav-item1{
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+         }
+         .nav-item2{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: rgba(255, 255, 255, 0.6);
+            
+         }
+         .nav-pai1{
+             width: 100px;
+             height: 51px;
+             margin-left: 16px;
+             margin-top: 3.81px;
+         }
+         .nav-pai2{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap:8px;
+             width: auto;
+             height: 51px;
+             margin-right: 16px;
+             
+         }
+
+         .nav-pai2 button{
+            width: 100px;
+            height: 26.39px;
+            background: #2E6B85;
+            border-radius: 15px;
+            border: none;
+            color: #FFFFFF;
+            cursor: pointer;
+         }
+         .nav-pai2 button:active{
+            opacity: 0.5;
+         }
+         body{
+             overflow-x: hidden;
+         }
+         button:focus {
+             outline:0;
+             }
+        
+        .body{
+            width: 100%;
+            height: 100vh; 
+            
+        }
+
+        .background{
+            background-image: url("images/background.png");
+            background-size:cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 435px;
+            position: absolute;
+            margin-top: 51px;  
+            
+        }
+        
+        .body-item1{
+            
+            margin-top: 59.68px;
+            margin-left: 24px;
+            color: #FFFFFF;
+            
+        }
+        .body-item1 p{
+            font-family: Roboto;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .body-pai{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            width: 100%;
+            height: 59.68px;
+            
+            
+        }
+        .body-item2{
+            display: flex;
+            align-items: center;
+            width: 213px;
+            height: 30px;
+            margin-top: 45px;
+            margin-right: 16px; 
+            background: #FFFFFF;         
+        }
+        
+        input[type="text2"]{
+            width: 139.27px;
+            height: 22px;
+            font-family: Roboto;
+            font-style: normal;
+            font-size: 16px;
+            border: 1px solid white;
+            margin-left:12px;
+        
+        }
+        input[type="text2"]:focus{
+            outline: 0; 
+             
+                       
+        }
+        .body-item2 img{
+            margin-left: 28.77px;
+        }
+        
+        .body-item3{
+            display: flex;
+            width: 186px;
+            height: 207.74px;
+            
+   
+        }
+       
+        
+        .body-item4{
+            font-family: Roboto;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 22px;
+            color: white;
+            margin-left: 24px;
+        }
+
+        #janela{
+            display: flex;
+            gap: 16px;
+            width:100%;
+            height: 207.74px;
+            position: absolute;
+            margin-left: 24px;
+            margin-top: 20.35px;
+            
+            
+        }
+        #janela img{ 
+            cursor: pointer;
+            width: 128px;
+               
+        }
+        #janela img:hover{
+            opacity: 0.8;
+            border-radius: 4px;
+            width: 128px;
+               
+        }
+        #imagem{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 955px;
+            margin-top: 100px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            cursor: pointer;  
+        }        
+        #imagem:active{
+            opacity: 0.5;
+        }
+       
+        .jump{
+          width: 100%;
+          height: 228px;
+         
+        }
+        #body-item2{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            width: 100%;
+            height: 54.24px;
+            margin-left: 24px;
+           
+            
+        }
+        #body-item2 p{
+            font-family: Roboto;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 22px;
+            color: white;
+            
+        }
+        #janela2{
+            display: flex;
+            position: absolute;
+            gap: 16px;
+            width: 100%;
+            height: 207.74px;
+            margin-left: 24px;
+            margin-top: 16.02px;
+            
+        }
+        #janela2 img{
+            border-radius: 4px;
+            width: 128px;
+            cursor: pointer;
+        }
+        #janela2 img:hover{
+            opacity: 0.8;
+        }
+
+        #imagem2{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 955px;
+            margin-top: 515px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            cursor: pointer;    
+        }        
+        #imagem2:active{
+            opacity: 0.5;
+        }
+        .body-item3{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            width: 100%;
+            margin-left: 24px;
+            height: 54.08px;
+        }
+        .body-item3 p{
+            font-family: Roboto;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 22px;
+            color: white;
+        }
+        #janela3{
+            display: flex;
+            position: absolute;
+            gap: 16px;
+            width: 100%;
+            height: 207.74px;
+            margin-left: 24px;
+            margin-top: 16.18px;
+        }
+        #janela3 img{
+            border-radius: 4px;
+            width: 128px;
+            cursor: pointer;
+        }
+        #janela3 img:hover{
+            opacity: 0.8;
+        }
+        #footer{
+            width: 100%;
+            height: 50px;
+        }
+
+        #imagem3{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 955px;
+            margin-top: 100px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            cursor: pointer;    
+        } 
+
+        #imagem3:active{
+            opacity: 0.5;
+        }
+
+        #backimagem{
+            background-image: url('images/pngegg.png');
+            background-size: 100%;
+            transform:  rotate(180deg); 
+            visibility: hidden;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            margin-top: 98px;
+            margin-left: 30px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #backimagem:active{
+           opacity: 0.5;
+
+        }
+
+        #backimagem2{
+            
+            background-image: url('images/pngegg.png');
+            background-size: 100%;
+            transform:  rotate(180deg); 
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            margin-top:98px;
+            margin-left: 30px;
+            cursor: pointer;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        #backimagem2:active{
+           opacity: 0.5;
+           
+        }
+
+        #backimagem3{
+            
+            background-image: url('images/pngegg.png');
+            background-size: 100%;
+            transform:  rotate(180deg); 
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            margin-top:98px;
+            margin-left: 30px;
+            cursor: pointer;
+            position: absolute;
+            visibility: hidden;
+            
+        }
+
+        #backimagem3:active{
+           opacity: 0.5;
+        }
+
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+        input[type=email], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        
+        }
+
+        input[type=email], input[type=password]:focus{
+        outline: 0;
+        }
+
+        #button1{  
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        }
+
+        #button1:hover {
+        opacity: 0.8;
+        }
+
+        #button2{
+        padding:10px;        
+        cursor: pointer;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        background-color: gray;
+        color: white;
+        }
+
+        #button2:hover {
+        opacity: 0.8;
+        }
+
+        #button3{
+        padding:10px;        
+        cursor: pointer;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        
+        }
+
+        #button3:hover {
+        opacity: 0.8;
+        }
+
+        .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+        }
+
+        .container {
+        padding: 16px;
+        }
+        
+        .modal {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+
+        }
+
+        .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888;
+        width: 50%; 
+        }
+        
+        .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: red;
+        cursor: pointer;
+        }
+        
+        .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+        }
+        
+        @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+        }
+
+        
+        @media screen and (max-width: 300px) {
+
+        span.psw {
+
+            display: block;
+            float: none;
+            
+        }
+         
+        }
+        .container2{
+            display: flex;
+            background-color: gainsboro;
+            height: 80px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        h1{
+            margin: 10px 0px 20px 0px;
+        }
+        p{
+            margin: 10px 0px 10px 0px;
+        }
+        hr{
+            margin: 10px 0px 20px 0px;
+        }
+        
+        .modall {
+
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        
+        }
+
+        .modall-content {
+
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; 
+            border: 1px solid #888;
+            width: 50%; 
+        
+        }
+        .close2 {
+
+            position: absolute;
+            right: 25px;
+            top: -15px;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+
+        }
+        
+        .close2:hover,
+        .close2:focus {
+
+            color: red;
+            cursor: pointer;
+
+        }
+        
+        .imagemm{
+
+            width:auto;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .imagemm img{
+            width: 160px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .modal3 {
+
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;  
+            background-color: rgba(0,0,0,0.4);
+
+        }
+
+        .modal3-content {
+            background-color: #11110f;
+            margin: 5% auto 15% auto; 
+            border: 1px solid #11110f;
+            width: 85%; 
+            margin-top: 20px;
+            background: linear-gradient(to top,  #1c1c17 5%, #11110f 95%);
+
+        }
+
+        #close3 {
+
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            padding-right: 5px;
+            padding-left: 5px;
+            border-radius: 5px;
+            margin-top: -40px;
+           
+            }
+
+        #close3:hover,
+        #close3:focus {
+
+            color: red;
+            cursor: pointer;
+        }
+        
+        .daddy{
+            display: flex;
+            width: 100%;
+            height: 500px;
+        }
+        #left{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: auto;
+            border-radius: 5px;
+            
+            
+        }
+        #daddy2{
+            width: 100%;
+            height: 100%;
+            margin-left: 20px;
+        }
+        .video{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(to bottom,   #0d0d0d 30%,  #1c1c17 95%);
+            border-radius: 5px;
+        }
+       
+        #left-bottom1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            font-size: 1.2em;
+            color: white;
+            
+        }
+        #left-bottom2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 200px;
+            padding-top: 20px;
+            
+        }
+        #left-bottom3{
+            display: flex;
+            justify-content: center;
+            width: 250px;
+            height: 190px;
+            margin-top: 10px;
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.7);
+            overflow-y: scroll;
+            
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: whitesmoke;
+        }
+        ::-webkit-scrollbar-thumb{
+            width: 8px;
+            background-color: gray;
+            
+        }
+        #bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            height: 96px;
+        }
+        #mind{
+            margin-bottom: 5px;
+           
+        }
+        #bottom-item1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 7px;
+            background: linear-gradient(to bottom,   #0d0d0d 5%,  #1c1c17 95%);
+        }
+        #bottom-item2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            padding: 7px;
+            color: rgba(255, 255, 255, 0.7);
+            background: linear-gradient(to bottom,   #0d0d0d 5%,  #1c1c17 95%);
+        }
+        #bottom-item3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            padding: 7px;
+            color: rgba(255, 255, 255, 0.7);
+            background: linear-gradient(to bottom,   #0d0d0d 5%,  #1c1c17 95%);
+        }
+        #bottom-item4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border-radius: 5px; 
+            padding: 7px;
+            color: rgba(255, 255, 255, 0.7);
+            background: linear-gradient(to bottom,   #0d0d0d 5%,  #1c1c17 95%);
+        }
+        #bottom-item5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 190px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 5px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        #topp{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 48px;   
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 30px;
+        }
+        #bottoomm{
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video:focus{
+              outline: 0;
+        }
+      
+        
+        
+        
+           
+    </style>
+
+</head>
+<body>
+      <nav>
+          <div class="nav-pai1">
+          <div class="nav-item1">Guaxinhok</div>
+          <div class="nav-item2">moVies</div>
+          
+        </div>
+          <div class="nav-pai2">
+            <button id="button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cadastre-se</button>
+            <button id="button1" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+            <div id="id01" class="modal">
+              
+              <form class="modal-content animate" id="formRegister">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  
+                </div>
+            
+                <div class="container">
+                    <h1>Registro</h1>
+                    <p>Por favor, preencha este formulário para criar uma conta.</p>
+                    <hr>
+                  <label><b>Email</b></label>
+                  <input type="email" placeholder="Insira o Email" name="email" required>
+            
+                  <label ><b>Senha</b></label>
+                  <input type="password" placeholder="Digite a Senha" name="senha" required>
+
+                  <label>
+                    
+                    <input type="checkbox" name="remember"> Lembre de Mim
+
+                  </label>
+                </div>
+            
+                <div class="container2">
+                   
+                  <button id="button2" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button  type="submit" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cadastrar</button>
+
+          </div>
+          </form>
+        </div>
+
+        <div id="id02" class="modall">
+              
+            <form class="modall-content animate" id="formLogin">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+                
+              </div>
+              <div class="imagemm">
+               <img src="images/img_avatar2.png">
+            </div>
+              <div class="container">
+                
+                <label for="uname"><b>Email</b></label>
+                <input type="email" placeholder="Insira o Email" name="email" required>
+          
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite a Senha" name="senha" required>
+
+                <label>
+                  
+                  <input type="checkbox" name="remember"> Lembre de Mim
+
+                </label>
+              </div>
+          
+              <div class="container2">
+
+                <button id="button2" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+                <button  type="submit" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Cadastrar</button>
+
+        </div>
+        </form>
+      </div> 
+        </div>
+        
+        <div id="filmeModal" class="modal3">
+
+            <form class="modal3-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('filmeModal').style.display='none'" id="close3" title="Close Modal">&times;</span>
+                  
+                </div>
+            
+                <div class="container">
+                    <div class="daddy">
+                        <div id="left">
+                           
+                            <div id="left-bottom1"></div>
+                            <div id="left-bottom2"></div>
+                            <div id="left-bottom3"><p></p></div>
+                        </div>
+                        <div id="daddy2">
+                        <div class="video">
+                            <video id="mind" controls width=500 height=380>
+                                <source  src="videos/movie.mp4">
+                                <source  src="videos/aquaman.mov">
+                            </video>
+                        </div>
+                        <div id="bottom">
+                            <div id="topp">
+                            <div id="bottom-item1"></div>
+                            <div id="bottom-item2"></div>
+                            <div id="bottom-item3"></div>
+                            <div id="bottom-item4"></div>
+                        </div>
+                        <div id="bottoomm">
+                            <div id="bottom-item5"></div>
+                        </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                    
+
+                </div>
+            
+               
+          </form>
+        </div>
+        
+    
+      </nav>
+      <div class="body">
+          <div class="background">
+            
+              <div class="body-pai">
+              
+                 <div class="body-item2">
+                      <input id="pesquisar" type="text2" list="textos" name="texto" placeholder="Pesquisar" maxlength="40">
+                      <datalist id="textos">
+                          <option value="O Chamado da Floresta"></option>
+                          <option value="Scooby! O Filme"></option>
+                          <option value="Aquaman"></option>
+                          <option value="Nós"></option>
+                          <option value="Capitã Marvel"></option>
+                          <option value="After"></option>
+                          <option value="A 5 Onda"></option>
+                          <option value="Como Eu Era Antes de Você"></option>
+                          <option value="Godzilla II : Rei dos Monstros"></option>
+                          <option value="Conveção das Bruxas"></option>
+                          <option value="Os Croods 2 : Uma Nova Era"></option>
+                          <option value="Pinóquio"></option>
+                          <option value="Monster Hunter"></option>
+                          <option value="A Viúva Das Sombras"></option>
+                          <option value="Kong : A Ilha da Caveira"></option>
+                          <option value="Intocáveis"></option>
+                          <option value="Os Parças 2"></option>
+                          <option value="Um Grito de Liberdade"></option>
+                          <option value="Undine"></option>
+                          <option value="One Piece : O Filme"></option>
+                          <option value="Como Se Fosse a Primeira Vez"></option>
+                          <option value="A Culpa é das Estrelas"></option>
+                          <option value="Caçador de Recompensas"></option>
+                          <option value="Invasão à Casa Branca"></option>
+                          <option value="Amizade Colorida"></option>
+                          <option value="Jogos Vorazes"></option>
+                          <option value="A Chegada"></option>
+                          <option value="O Ilusionista"></option>
+                          <option value="Um Amor Para Recordar"></option>
+                          <option value="2012 "></option>
+                      </datalist>
+                    <img src="images/lupa.png">
+                   
+                 </div>
+      </div>
+      
+      <div class="body-item1">
+        <p>Filmes</p>  
+       </div> 
+      
+       <div id="janela"> 
+           
+       </div>
+
+       <div id="imagem">
+        <img src="images/pngegg.png" width="50" height="50">
+      </div>
+      <div id="backimagem"></div>
+     
+      <div class="jump"></div>
+      <div id=body-item2>
+          <p>top 10 hoje</p>
+        </div>
+        
+        <div id="janela2">
+       
+        </div>
+        <div id="backimagem2"></div>   
+        <div class="jump"></div>
+        <div class="body-item3">
+            <p>Filmes Parecidos</p>
+        </div>
+        
+        <div id="janela3">
+          
+        </div>
+        
+        <div id="imagem3">
+            <img src="images/pngegg.png" width="50" height="50">
+          </div>
+          <div id="backimagem3"></div>
+        <div id="footer">
+            
+        </div>
+        <div class="jump"></div>
+        
+      </div>
+      <div id="imagem2">
+        <img src="images/pngegg.png" width="50" height="50">
+      </div>
+      
+      
+      
+</body>
+<script>
+    var posicao = 0;
+    var posicao2 = 0;
+    var posicao3 = 0;
+    var qualLista = 0;
+    var registros = [
+        {
+            email: "matheuzin@gmail.com",
+            senha: "1234"
+        },
+    ];  
+
+    var filmes = [ 
+        {
+            filmes: [
+        
+                {
+                    nome:"O Chamado da Floresta",
+                    image:"images/filme1.jpg",
+                    imagem:"<img src='images/filme1.jpg' width=150 height=180>",
+                    ano:"20 de fevereiro de 2020",
+                    filme:"videos/movie.mp4",
+                    genero1:"Animação",
+                    genero2:"Aventura",
+                    genero3:"Drama",
+                    genero4:"Infantil",
+                    descricao: "Um cão de estimação vivia confortavelmente na casa de uma família na Califórnia, mas é sequestrado e acaba em um dos lugares mais hostis do mundo, o Alaska. Seu destino se cruza com o de John Thornton, um homem corajoso disposto a explorar as belezas e aventuras da travessia de Yukon." 
+                },
+                {
+                    nome:"Scooby! O Filme",
+                    image: "images/filme2.jpg",
+                    imagem:"<img src='images/filme2.jpg' width=150 height=180>",
+                    ano:"10 de setembro de 2020",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Animação",
+                    genero3:"Comédia",
+                    genero4:"Mistério",
+                    descricao: "Scooby e sua turma encaram o seu maior e mais difícil mistério de todos os tempos: um plano maligno para liberar o cão fantasma, Cérbero, no mundo. Enquanto corre para impedir esse 'apocãolipse' global, a turma descobre que Scooby tem um legado secreto e um destino épico maior do que qualquer um podia imaginar."
+                },
+                {
+                    nome:"Aquaman",
+                    image: "images/filme3.jpg",
+                    imagem:"<img src='images/filme3.jpg' width=150 height=180>",
+                    ano:"13 de dezembro de 2018",
+                    filme:"videos/aquaman.mov",
+                    genero1:"Ação",
+                    genero2:"Aventura",
+                    genero3:"Fantasia",
+                    genero4:"Ficção científica",
+                    descricao: "A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm. Com um vasto exército a seu dispor, Orm planeja conquistar tanto os demais reinos do oceano, quanto o mundo da superfície. Em seu caminho está Aquaman, meio-humano e meio-atlante, e verdadeiro herdeiro do trono. Com a ajuda da princesa Mera, Aquaman precisa recuperar o lendário Tridente de Atlan e aceitar seu destino como protetor das profundezas."
+                    
+                },
+                {
+                    nome:"Capitã Marvel",
+                    image: "images/filme4.jpg",
+                    imagem:"<img src='images/filme4.jpg' width=150 height=180>",
+                    ano:"7 de março de 2019",
+                    filme:"videos/movie.mp4",
+                    genero1:"Ação",
+                    genero2:"Filme de super-herói",
+                    genero3:"Ficção científica",
+                    genero4:"Fantasia",
+                    descricao: "Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls. Ao tentar impedir uma invasão de larga escala na Terra, em 1995, ela tem memórias recorrentes de uma outra vida, como Carol Danvers, agente da Força Aérea norte-americana. Com a ajuda de Nick Fury, Capitã Marvel precisa descobrir os segredos de seu passado e pôr um fim ao conflito intergalático com os Skrulls."
+
+
+                },
+                {
+                    nome:"Nós",
+                    image: "images/filme5.jpg",
+                    imagem:"<img src='images/filme5.jpg' width=150 height=180>",
+                    ano:"21 de março de 2019",
+                    filme:"videos/movie.mp4",
+                    genero1:"Terror",
+                    genero2:"Terror psicológico",
+                    genero3:"Suspense",
+                    genero4:"Mistério",
+                    descricao: "Adelaide e Gabe levam a família para passar um fim de semana na praia e descansar. Eles começam a aproveitar o ensolarado local, mas a chegada de um grupo misterioso muda tudo e a família se torna refém de seres com aparências iguais às suas."
+
+                },
+                {
+                    nome:"After",
+                    image: "images/filme6.jpg",
+                    imagem:"<img src='images/filme6.jpg' width=150 height=180>",
+                    ano:"11 de abril de 2019",
+                    filme:"videos/movie.mp4",
+                    genero1:"Romance",
+                    genero2:"Melodrama",
+                    genero3:"Drama",
+                    genero4:"Suspense",
+                    descricao: "Tessa Young é uma jovem com uma vida simples, ótimas notas na escola, muitos amigos e um bom namorado. Todos os próximos passos de sua vida já estão planejados, mas as coisas mudam quando ela conhece um homem atraente e cheio de segredos sombrios."
+
+                },
+                {
+                    nome:"A 5 Onda",
+                    image: "images/filme7.jpg",
+                    imagem:"<img src='images/filme7.jpg' width=150 height=180>",
+                    ano:"21 de janeiro de 2016",
+                    filme:"videos/movie.mp4",
+                    genero1:"Ação",
+                    genero2:"Ficção científica",
+                    genero3:"Guerra",
+                    genero4:"Suspense",
+                    descricao: "Uma série de ataques alienígenas ameaça a raça humana. Separada da família, uma adolescente está disposta a fazer de tudo para encontrar o irmão antes que a quinta onda extermine a humanidade."
+
+                },
+                {
+                    nome:"Como Eu Era Antes de Você",
+                    image: "images/filme8.jpg",
+                    imagem:"<img src='images/filme8.jpg' width=150 height=180>",
+                    ano:"16 de junho de 2016",
+                    filme:"videos/movie.mp4",
+                    genero1:"Adaptação",
+                    genero2:"Drama",
+                    genero3:"Romance",
+                    genero4:"Comédia dramática",
+                    descricao: "De origem modesta e sem grandes aspirações, a peculiar Louisa Clark é contratada para ser cuidadora de Will, um jovem tetraplégico depressivo e cínico"
+
+                },
+                {
+                    nome:"Godzilla II : Rei dos Monstros",
+                    image: "images/filme9.jpg",
+                    imagem:"<img src='images/filme9.jpg' width=150 height=180>",
+                    ano:"30 de maio de 2019",
+                    filme:"videos/movie.mp4",
+                    genero1:"Ação",
+                    genero2:"Aventura",
+                    genero3:"Fantasia",
+                    genero4:"Ficção científica",
+                    descricao: "Membros da agência Monarch enfrentam monstros gigantescos, incluindo o poderoso Godzilla, que entra em choque com Mothra, Rodan e seu maior inimigo, King Ghidorah, o monstro de três cabeças. Essas antigas superespécies disputam a supremacia, deixando a própria existência da humanidade em risco."
+
+                },
+                {
+                    nome:"Conveção das Bruxas",
+                    image: "images/filme10.jpg",
+                    imagem:"<img src='images/filme10.jpg' width=150 height=180>",
+                    ano:"19 de novembro de 2020",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao: "Enquanto está hospedado em um hotel na Inglaterra com a avó, Luke espiona uma convenção de bruxas e descobre que elas estão planejando transformar todas as crianças em ratos. As bruxas percebem que Luke as ouviu e testam a fórmula nele."
+
+                }
+            ]
+            },
+        {
+            top10: [
+        
+                {
+                    nome:"Os Croods 2 : Uma Nova Era",
+                    image:"images/filme11.jpg",
+                    ano:"25 de março de 2021",
+                    filme:"videos/movie.mp4",
+                    imagem:"<img src='images/filme11.jpg' width=150 height=180>",
+                    genero1:"Aventura",
+                    genero2:"Animação",
+                    genero3:"Comédia",
+                    genero4:"Fantasia",
+                    descricao:"Em 2013, o mundo foi apresentado à primeira família da era pré-histórica: Os Croods. Indicada ao Oscar, a comédia animada falava sobre um clã que lidava com um mundo em mudança e cativou o público nos lembrando da importância atemporal da família... e o quão pouco evoluímos de lá pra cá.",
+                    
+                },
+                {
+                    nome:"Pinóquio",
+                    image: "images/filme12.jpg",
+                    imagem:"<img src='images/filme12.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"",
+                    genero2:"",
+                    genero3:"",
+                    genero4:"",
+                    descricao:"O marceneiro Geppetto vê uma estrela cadente e deseja que o boneco que acabou de criar, Pinóquio, torne-se um menino de verdade. A Fada Azul concede o seu desejo e pede a Jiminy Cricket para servir como a consciência do menino de madeira.",
+                
+                },
+                {
+                    nome:"Monster Hunter",
+                    image: "images/filme13.jpg",
+                    imagem:"<img src='images/filme13.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"A tenente Artemis e seus leais soldados são transportados para um novo mundo, dominado por monstros perigosos. Em uma batalha desesperada pela sobrevivência contra inimigos formidáveis, Artemis se une a um homem misterioso.",
+                },
+                {
+                    nome:"A Viúva das Sombras",
+                    image: "images/filme14.jpg",
+                    imagem:"<img src='images/filme14.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Baseado em eventos reais, o terror conta a história de um grupo de voluntários que entra em uma densa floresta para resgatar um adolescente desaparecido. Nesse mesmo lugar, diversas pessoas sumiram nas últimas três décadas, e apenas alguns corpos foram encontrados, todos nus. A comunicação com a base fora da mata é interrompida misteriosamente. Sem sucesso na busca pelo jovem, eventos sobrenaturais acontecem e a equipe começa acreditar na lenda local que diz existir espíritos sombrios que levam as pessoas.",
+                },
+                {
+                    nome:"Kong : A Ilha da Caveira",
+                    image: "images/filme15.jpg",
+                    imagem:"<img src='images/filme15.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Um ex-militar viaja com um grupo de desbravadores até a mítica Ilha da Caveira, onde seu irmão desapareceu enquanto procurava o Titan, soro que teria o poder de curar todas as doenças. Além de resgatar o irmão, o homem precisa enfrentar as criaturas que habitam o local. A equipe de exploradores se aventura nas profundezas da ilha desconhecida no Pacífico, que é tão bonita quanto traiçoeira, sem saber que está entrando nos domínios do mítico Kong.",
+                },
+                {
+                    nome:"Intocáveis",
+                    image: "images/filme16.jpg",
+                    imagem:"<img src='images/filme16.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Um milionário tetraplégico contrata um homem da periferia para ser o seu acompanhante, apesar de sua aparente falta de preparo. No entanto, a relação que antes era profissional cresce e vira uma amizade que mudará a vida dos dois.",
+                },
+                {
+                    nome:"Os Parças 2",
+                    image: "images/filme17.jpg",
+                    imagem:"<img src='images/filme17.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Romeu precisa conseguir dinheiro e deixar o país o quanto antes para escapar de China, que saiu da cadeia e busca vingança. Para ajudá-lo, Toinho, Ray Van e Pilôra juntam forças para reformar uma colônia de férias. Quando o empreendimento começa a funcionar, eles logo passam a competir com uma colônia vizinha, bem mais requintada.",
+                },
+                {
+                    nome:"Um Grito de Liberdade",
+                    image: "images/filme18.jpg",
+                    imagem:"<img src='images/filme18.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Na África do Sul dos anos 70, Donald Woods, um jornalista branco, faz amizade com Stephen Biko, um corajoso ativista negro contra o apartheid. Biko é executado em 1977 e Donald, exilado, dedica-se a divulgar a luta do amigo pela liberdade",
+                },
+                {
+                    nome:"Undine",
+                    image: "images/filme19.jpg",
+                    imagem:"<img src='images/filme19.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"Undine é historiadora, e trabalha dando palestras a estrangeiros sobre a formação da cidade de Berlim. Ela vive um relacionamento com Johannes, até ele trocá-la por outra mulher. Com o tempo, Undine aceita o término e se apaixona por Christoph, um mergulhador industrial. A profissão dele fascina a nova namorada, que também explora o mundo submarino. No entanto, alguns acidentes de percurso colocarão Undine, Christoph e Johannes em rota de colisão.",
+                },
+                {
+                    nome:"One Piece : O Filme",
+                    image: "images/filme20.jpg",
+                    imagem:"<img src='images/filme20.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    genero1:"Aventura",
+                    genero2:"Comédia",
+                    genero3:"Mistério",
+                    genero4:"Terror",
+                    descricao:"O sonho final de Monkey D.Luffy é encontrar o lendário tesouro de One Piece que o tornará o Rei dos Piratas!Luffy comeu uma fruta amaldiçoada, dando-lhe poderes sobrenaturais: um corpo de borracha que ele usa de maneiras surpreendentemente inventivas, mas também fazendo com que sofra de uma fraqueza fatal, quando se trata de água",    
+                      }
+            ]
+        },
+        {
+            filmesParecidos: [
+        
+                {
+                    nome:"Como Se Fosse a Primeira Vez",
+                    image:"images/filme21.jpg",
+                    imagem:"<img src='images/filme21.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                    
+                },
+                {
+                    nome:"A Culpa é das Estrelas",
+                    image: "images/filme22.jpg",
+                    imagem:"<img src='images/filme22.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                
+                },
+                {
+                    nome:"Caçador de Recompensas",
+                    image: "images/filme23.jpg",
+                    imagem:"<img src='images/filme23.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"Invasão à Casa Branca",
+                    image: "images/filme24.jpg",
+                    imagem:"<img src='images/filme24.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"Amizade Colorida",
+                    image: "images/filme25.jpg",
+                    imagem:"<img src='images/filme25.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"Jogos Vorazes",
+                    image: "images/filme26.jpg",
+                    imagem:"<img src='images/filme26.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"A Chegada",
+                    image: "images/filme27.jpg",
+                    imagem:"<img src='images/filme27.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"O Ilusionista",
+                    image: "images/filme28.jpg",
+                    imagem:"<img src='images/filme28.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"Um Amor Para Recordar",
+                    image: "images/filme29.jpg",
+                    imagem:"<img src='images/filme29.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                },
+                {
+                    nome:"2012",
+                    image: "images/filme30.jpg",
+                    imagem:"<img src='images/filme30.jpg' width=150 height=180>",
+                    ano:"",
+                    filme:"videos/movie.mp4",
+                    descricao:"",
+                }
+            ]
+        },
+    ]; 
+
+    $('#formRegister').submit(function(event) { 
+    var {email, senha} = event.target.elements;
+    registros.push({
+        email: email.value,
+        senha: senha.value
+        
+    })
+
+    alert('criada com sucesso');
+
+     
+    return false;
+
+    });
+ 
+    $('#formLogin').submit(function(event) {  
+    var {email, senha} = event.target.elements; 
+    var existeUsuario = false;
+    registros.forEach(element =>{ 
+        if(element.email === email.value && element.senha === senha.value){
+            existeUsuario = true;
+        }
+    })
+
+    if(existeUsuario === true){
+        alert('logado com sucesso');
+    }else{
+        alert('senha incorreta');
+    }
+    
+    return false;
+
+    });
+
+    
+    var modal = document.getElementById('id01');
+      
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var modal = document.getElementById('id02');
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+    
+    function abrirModalFilme(params){
+       var modal = document.getElementById('filmeModal')
+       modal.style.display='block' 
+       $("#left-bottom3").append(''+params.descricao+'');
+       $("#left-bottom2").append(''+params.imagem+'');
+       $("#left-bottom1").append(''+params.nome+''); 
+       $("#bottom-item1").append(''+params.genero1+'');    
+       $("#bottom-item2").append(''+params.genero2+'');
+       $("#bottom-item3").append(''+params.genero3+'');
+       $("#bottom-item4").append(''+params.genero4+'');
+       $("#bottom-item5").append(''+params.ano+'');
+       var video = $('#mind')[0];
+        video.pause();
+        $("#mind").attr('src', params.filme);
+        video.load();
+        video.play();
+
+    }
+    function abrirModaltop10(params){
+       var modal = document.getElementById('filmeModal2')
+       modal.style.display='block' 
+       $("#left-bottom3").append(''+params.descricao+'');
+       $("#left-bottom2").append(''+params.imagem+'');
+       $("#left-bottom1").append(''+params.nome+''); 
+       $("#bottom-item1").append(''+params.genero1+'');    
+       $("#bottom-item2").append(''+params.genero2+'');
+       $("#bottom-item3").append(''+params.genero3+'');
+       $("#bottom-item4").append(''+params.genero4+'');
+       $("#bottom-item5").append(''+params.ano+'');
+       var video = $('#mind')[0];
+        video.pause();
+        $("#mind").attr('src', params.filme);
+        video.load();
+        video.play();
+
+    }
+  
+        function modalLogin(){
+            document.getElementById('login').style.display='block';
+            
+        }
+        $("#close3").click(function() { 
+             
+             $("#left-bottom1").empty()
+             $("#left-bottom2").empty()
+             $("#left-bottom3").empty()
+             $("#top").empty()
+             $("#mind").empty()
+             $("#bottom-item1").empty()
+             $("#bottom-item2").empty()
+             $("#bottom-item3").empty()
+             $("#bottom-item4").empty()
+             $("#bottom-item5").empty()
+
+        });
+         filmes[0].filmes.forEach(element => { // percorre a array
+            var img = document.createElement('img');
+            img.src = element.image;
+            img.addEventListener('click', function(){
+                abrirModalFilme(element);
+                
+            });
+            
+            $("#janela").append(img); 
+
+            
+        }); 
+        filmes[1].top10.forEach(element => { // percorre a array
+            var img = document.createElement('img');
+            img.src = element.image;
+            img.addEventListener('click', function(){
+                abrirModalFilme(element);
+                
+            });
+            
+            $("#janela2").append(img); 
+
+        }); 
+        filmes[2].filmesParecidos.forEach(element => { // percorre a array
+            var img = document.createElement('img');
+            img.src = element.image;
+            img.addEventListener('click', function(){
+                abrirModalFilme(element);
+                
+            });
+            
+            $("#janela3").append(img); 
+
+        }); 
+        $("#pesquisar").change(function() { 
+            
+             var pesquisar = $("#pesquisar").val() // retorna o valor do input pesquisar
+             // remove elementos filhos ;
+            
+             $("#janela").empty()
+             $("#janela2").empty()
+             $("#janela3").empty()
+             
+
+             filmes[0].filmes.forEach(element => { // percorre a array 
+                
+                if(pesquisar ==  0){
+                    $("#janela").append( '<img src="'+ element.image +'" >'); 
+                }
+                if(pesquisar === element.nome){
+                    qualLista = 0;
+                }
+             });
+             
+             filmes[1].top10.forEach(element => { // percorre a array
+                if(pesquisar ==  0){
+                    $("#janela2").append( '<img src="'+ element.image +'" >'); 
+                } 
+                if(pesquisar === element.nome){
+                    qualLista = 1;
+                }  
+             });
+             filmes[2].filmesParecidos.forEach(element => { // percorre a array
+                if(pesquisar ==  0){
+                    $("#janela3").append( '<img src="'+ element.image +'" >'); 
+                }  
+                if(pesquisar === element.nome){
+                    qualLista = 2;
+                }  
+             });
+              
+             if(qualLista === 0){
+                 
+                 
+                //filmes - lista2
+                filmes[0].filmes.forEach(element => { // percorre a array 
+                  
+                           
+                    
+                    if(pesquisar === element.nome){
+                        var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela").append(img)
+                    
+                    }      
+                    
+                });
+                }else{
+                    filmes[0].filmes.forEach(element => { // percorre a array 
+                    var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela").append(img)
+                          
+                    });
+                }
+             
+             if(qualLista === 1){
+                //filmes - lista2
+                filmes[1].top10.forEach(element => { // percorre a array 
+                    if(pesquisar === element.nome){
+                        var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela2").append(img)
+                    }      
+                       
+                });
+             }else{
+                filmes[1].top10.forEach(element => { // percorre a array
+                    var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela2").append(img)
+                          
+                    });
+             }
+             
+             if(qualLista === 2){
+                 
+                //filmes - lista3
+                filmes[2].filmesParecidos.forEach(element => { // percorre a array 
+                    if(pesquisar === element.nome){
+                        var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela3").append(img)
+                    }      
+                       
+                });
+             }else{
+                filmes[2].filmesParecidos.forEach(element => { // percorre a array
+                    var img = document.createElement('img');
+                    img.src = element.image;
+                    img.addEventListener('click', function(){
+                        abrirModalFilme(element);
+                        
+                    });
+                    $("#janela3").append(img)
+                    
+                    });
+             }
+        });    
+  
+         function arrastarDireita(){
+             $('#janela').animate({left:"-=220"},500)
+             if($('#janela').position().left <= -440){
+              $('#janela').stop()
+
+             }
+             if($('#janela').position().left >= 0){
+                 
+              $('#backimagem').css("visibility","visible")
+              
+               }
+          posicao += 220;
+         }
+
+         function arrastarDireita2(){
+         $('#janela2').animate({left:"-=205"},500)
+         if($('#janela2').position().left== - 1435){
+              $('#janela2').stop()
+             }
+             if($('#janela2').position().left >= 0){
+              $('#backimagem2').css("visibility","visible")
+                }
+                posicao2 += 205;
+         }
+         function arrastarDireita3(){
+         $('#janela3').animate({left:"-=205"},500)
+         if($('#janela3').position().left== - 1435){
+              $('#janela3').stop()
+             }
+             if($('#janela3').position().left >= 0){
+              $('#backimagem3').css("visibility","visible")
+                }
+                posicao3 += 205;
+         } 
+         function arrastarEsquerda(){ 
+             posicao -= 220;
+             $('#janela').animate({left:"+=220"},500) 
+             if($('#backimagem').position().left <= 0 && posicao === 0){
+              $('#backimagem').css("visibility","hidden")
+             } 
+         }
+         function arrastarEsquerda2(){
+             posicao2 -= 205;
+             $('#janela2').animate({left:"+=205"},500)
+             if($('#backimagem2').position().left <= 0 && posicao2 === 0){
+              $('#backimagem2').css("visibility","hidden")
+             }   
+         }
+         function arrastarEsquerda3(){
+             posicao3 -= 205;
+             $('#janela3').animate({left:"+=205"},500)
+             if($('#backimagem3').position().left <= 0 && posicao3 === 0){
+              $('#backimagem3').css("visibility","hidden")
+             } 
+         }
+         function mostrarFilme(){
+
+         if($('#input') == 'Extraordinário'){
+                $('#imagem').css("background-color","blue")
+         }
+      }  
+ 
+         $(function(e){
+         $('#imagem').click(arrastarDireita)
+         $('#imagem2').click(arrastarDireita2)
+         $('#imagem3').click(arrastarDireita3)
+         $('#backimagem').click(arrastarEsquerda)
+         $('#backimagem2').click(arrastarEsquerda2)
+         $('#backimagem3').click(arrastarEsquerda3)
+         $('#input').text(mostrarFilme)
+         
+         })
+    
+</script>
+</html>
